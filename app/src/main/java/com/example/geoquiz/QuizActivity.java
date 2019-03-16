@@ -35,7 +35,9 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Log.d(TAG, "onCreate(Bundle) called");
+
         setContentView(R.layout.activity_quiz);
 
         if (savedInstanceState != null) {
@@ -46,6 +48,7 @@ public class QuizActivity extends AppCompatActivity {
         updateQuestion();
 
         mTrue_Button = findViewById(R.id.true_button);
+        //mTrue_Button=findViewById(R.id.question_text_view);
         mFalse_Button = findViewById(R.id.false_button);
         mNextButton = findViewById(R.id.next_button);
 
@@ -150,6 +153,10 @@ public class QuizActivity extends AppCompatActivity {
 
     //функция обновления вопроса
     private void updateQuestion() {
+
+        //Комманда регистрации исключения
+        //Log.d(TAG, "Updating question text", new Exception());
+
         int question = mQuestionBank[mCurrentIndex].getTextResId();
         mQuestionTextView.setText(question);
     }
