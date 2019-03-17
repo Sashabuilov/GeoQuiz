@@ -35,17 +35,24 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
+    android:gravity="center"
     >
+    <Button
+        android:id="@+id/cheat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cheat_button"
+        />
 
-    <ImageButton
+    <Button
         android:id="@+id/next_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/arrow_right"
-        android:padding="24dp"
-        android:contentDescription="TODO" />
-
+        android:drawableEnd="@drawable/arrow_right"
+        android:drawableRight="@drawable/arrow_right"
+        android:drawablePadding="10dp"
+        android:text="@string/next_button" />
 
 
 </LinearLayout>
